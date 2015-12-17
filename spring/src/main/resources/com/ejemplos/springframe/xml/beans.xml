@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="mundo" class="com.ejemplos.beans.Mundo">
-		<property name="saludo" value="Hola JAJAJAJA!"></property>
+		<property name="saludo" value="Hola jojojo!"></property>
 	</bean>
 	
 
