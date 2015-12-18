@@ -2,8 +2,10 @@ package com.ejemplos.springframe.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+//import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.ejemplos.beans.AppConfig;
 import com.ejemplos.beans.Mundo;
 
 public class App {
@@ -16,7 +18,14 @@ public class App {
 		
 		//CON SPRING
 		//debo indicar la direccion del BEANS si es que no esta en el mismo paquete, si lo esta dejo en balnco la direccion.
-		ApplicationContext appContext =	new ClassPathXmlApplicationContext("com/ejemplos/springframe/xml/beans.xml");
+		
+		//Comentado para realizar la anotación
+		//ApplicationContext appContext =	new ClassPathXmlApplicationContext("com/ejemplos/springframe/xml/beans.xml");
+		
+		//Para las anotaciones es invocado AnnotationConfigApplicationContext() y dentro del parametro
+		//indicamos la clase que define nuestros beans
+		ApplicationContext appContext =	new AnnotationConfigApplicationContext(AppConfig.class);
+		
 		Mundo m = (Mundo) appContext.getBean("mundo");//tambien puede ser especificando la clase EJ: getBean(Mundo.class);
 		System.out.println(m.getSaludo());
 		

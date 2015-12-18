@@ -13,6 +13,7 @@ public class AppConfig {
 	<bean id="mundo" class="com.ejemplos.beans.Mundo">
 		<property name="saludo" value="Hola jojojo!"></property>
 	</bean>
+	el valor o value es definido en la clase Mundo mediante la anotacion @Value
 	
 	      :con XML  => con Anotaciones
 	mundo :    id   => nombre del método 
