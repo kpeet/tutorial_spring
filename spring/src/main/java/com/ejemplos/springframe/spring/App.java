@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 //import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ejemplos.beans.AppConfig;
+import com.ejemplos.beans.AppConfig2;
 import com.ejemplos.beans.Mundo;
 
 public class App {
@@ -24,9 +25,12 @@ public class App {
 		
 		//Para las anotaciones es invocado AnnotationConfigApplicationContext() y dentro del parametro
 		//indicamos la clase que define nuestros beans
-		ApplicationContext appContext =	new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		Mundo m = (Mundo) appContext.getBean("mundo");//tambien puede ser especificando la clase EJ: getBean(Mundo.class);
+		//Se ha agregado una nueva clase por anotacion ,AppConfig2.class
+		ApplicationContext appContext =	new AnnotationConfigApplicationContext(AppConfig.class,AppConfig2.class);
+		
+		//Se ha modificado el id del objeto que se esta invocando por "marte", que es un objeto de la clase AppConfig2
+		Mundo m = (Mundo) appContext.getBean("marte");//tambien puede ser especificando la clase EJ: getBean(Mundo.class);
 		System.out.println(m.getSaludo());
 		
 		//En caso de querer cerrar el recurso//
