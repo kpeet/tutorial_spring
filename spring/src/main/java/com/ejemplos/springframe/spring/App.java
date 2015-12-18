@@ -27,7 +27,16 @@ public class App {
 		//indicamos la clase que define nuestros beans
 		
 		//Se ha agregado una nueva clase por anotacion ,AppConfig2.class
-		ApplicationContext appContext =	new AnnotationConfigApplicationContext(AppConfig.class,AppConfig2.class);
+		
+		//Segundo tipo de carga de BEANS
+		//ApplicationContext appContext =	new AnnotationConfigApplicationContext(AppConfig.class,AppConfig2.class);
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
+		 appContext.register(AppConfig2.class);
+		 appContext.register(AppConfig.class);
+		 appContext.refresh();//<-- estoy reconstruyendo el archivo de configuracion con
+		 //todos los archivos java que continenen la configuracion con Beans
+		
+		
 		
 		//Se ha modificado el id del objeto que se esta invocando por "marte", que es un objeto de la clase AppConfig2
 		Mundo m = (Mundo) appContext.getBean("marte");//tambien puede ser especificando la clase EJ: getBean(Mundo.class);
