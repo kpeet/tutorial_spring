@@ -14,6 +14,11 @@
 	
 	<bean id="pais" class="com.ejemplos.beans.Pais">
 	<property name="nombre" value="Perú"></property>
+	<property name="ciudad" ref="ciudad"></property>
+	</bean>
+	
+	<bean id="ciudad" class="com.ejemplos.beans.Ciudad">
+	<property name="nombre" value="Lima"></property>
 	</bean>
 	
 

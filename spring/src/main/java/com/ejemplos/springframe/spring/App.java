@@ -13,7 +13,7 @@ public class App {
 		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/ejemplos/springframe/xml/beans.xml");
 		Persona per = (Persona) appContext.getBean("persona");
-		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre());
+		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre()+" "+per.getPais().getCiudad().getNombre());
 		/*
 		##turorial 7 inyeccion de objetos##
 		
