@@ -15,7 +15,7 @@ public class App {
 		Persona per = (Persona) appContext.getBean("persona");
 		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre()+" "+per.getPais().getCiudad().getNombre());
 		/*
-		##turorial 7 inyeccion de objetos##
+		##turorial 8 beans anidados##
 		
 		
 		 */
