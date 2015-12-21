@@ -21,5 +21,7 @@
 	<property name="nombre" value="Lima"></property>
 	</bean>
 	
+	<!-- nuevo alias para invocar a persona desde la aplicacion App.java   -->
+	<alias name="persona" alias="personaBean" />
 
 </beans>

@@ -12,7 +12,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/ejemplos/springframe/xml/beans.xml");
-		Persona per = (Persona) appContext.getBean("persona");
+		Persona per = (Persona) appContext.getBean("personaBean");//llamo al alias o apodo
 		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre()+" "+per.getPais().getCiudad().getNombre());
 		/*
 		##turorial 7 inyeccion de objetos##
