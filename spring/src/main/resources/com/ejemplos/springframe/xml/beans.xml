@@ -5,7 +5,7 @@
 
 
 	
-	<bean id="persona" class="com.ejemplos.beans.Persona">
+	<bean id="persona" class="com.ejemplos.beans.Persona" name="personaBean2">
 	<property name="pais" ref="pais"></property>
 	<property name="id" value ="1"></property>
 	<property name="nombre" value ="Jaime"></property>
