@@ -14,11 +14,27 @@
 	
 	<bean id="pais" class="com.ejemplos.beans.Pais">
 	<property name="nombre" value="Perú"></property>
-	<property name="ciudad" ref="ciudad"></property>
+	<property name="ciudad">
+	<!-- Es borrada la referencia ref porque ya no se esta referiendo a un solo bean y
+	es agregado al campo list que referencia a los beans que aparecen a continuación-->
+		<list>
+			<ref bean="ciudad1"/>
+			<ref bean="ciudad2"/>
+			<ref bean="ciudad3"/>
+		</list>
+	</property>
 	</bean>
 	
-	<bean id="ciudad" class="com.ejemplos.beans.Ciudad">
-	<property name="nombre" value="Lima"></property>
+	<bean id="ciudad1" class="com.ejemplos.beans.Ciudad">
+		<property name="nombre" value="Lima"></property>
+	</bean>
+	
+	<bean id="ciudad2" class="com.ejemplos.beans.Ciudad">
+		<property name="nombre" value="Piura"></property>
+	</bean>
+	
+	<bean id="ciudad3" class="com.ejemplos.beans.Ciudad">
+		<property name="nombre" value="Chiclayo"></property>
 	</bean>
 	
 	<!-- nuevo alias para invocar a persona desde la aplicacion App.java   -->
