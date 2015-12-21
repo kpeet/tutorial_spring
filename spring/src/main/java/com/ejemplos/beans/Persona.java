@@ -5,18 +5,16 @@ public class Persona {
 	private int id;
 	private String nombre;
 	private String apodo;
+	private Pais pais;
 	
-	
-	public Persona(int id, String apodo, String nombre){
-		this.id = id;
-		this.nombre=nombre;
-		this.apodo = apodo;
-		
-	}
-	public Persona(int id){
-		this.id = id;
+	public Pais getPais() {
+		return pais;
 	}
 
+	public void setPais(Pais pais) {
+		this.pais = pais;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -40,5 +38,7 @@ public class Persona {
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
 	}
+
+
 
 }

@@ -2,7 +2,6 @@ package com.ejemplos.springframe.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-//import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
@@ -14,9 +13,9 @@ public class App {
 		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/ejemplos/springframe/xml/beans.xml");
 		Persona per = (Persona) appContext.getBean("persona");
-		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo());
+		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre());
 		/*
-		##turorial 6 inyeccion por contrucctor##
+		##turorial 7 inyeccion de objetos##
 		
 		
 		 */

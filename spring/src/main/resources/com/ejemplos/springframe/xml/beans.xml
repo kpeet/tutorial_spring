@@ -6,9 +6,14 @@
 
 	
 	<bean id="persona" class="com.ejemplos.beans.Persona">
-	<constructor-arg index="0" value="1"></constructor-arg>
-	<constructor-arg index="1" value="Jaime"></constructor-arg>
-	<constructor-arg index="2" value="MitoCode"></constructor-arg>
+	<property name="pais" ref="pais"></property>
+	<property name="id" value ="1"></property>
+	<property name="nombre" value ="Jaime"></property>
+	<property name="apodo" value ="MitoCode"></property>
+	</bean>
+	
+	<bean id="pais" class="com.ejemplos.beans.Pais">
+	<property name="nombre" value="Perú"></property>
 	</bean>
 	
 
