@@ -5,15 +5,19 @@
 
 
 	
-	<bean id="persona" class="com.ejemplos.beans.Persona" >
-	<property name="pais" ref="pais"></property>
-	<!-- Todo lo relacionado a listas se ha borrado y se ha incorporado el tag property de abajo con ref-->
-	<property name="ciudad" ref="ciudad"></property>
+	<bean id="persona" class="com.ejemplos.beans.Persona" autowire="byName">
+	<!-- Al escribir autowire nos olvidamos de las dependencias que son necesarias para este objeto -->
+	<!--  <property name="pais" ref="pais"></property> <-Dependencia borrada -->
+	
+	<!--  <property name="ciudad" ref="ciudad"></property> <- Dependencia borrada -->
+	<!-- Por Nombre se busca la definicion de pais y de ciudad -->
 	<property name="id" value ="1"></property>
 	<property name="nombre" value ="Jaime"></property>
 	<property name="apodo" value ="MitoCode"></property>
 	</bean>
 	
+	<!-- Nota importante con NOMBRE DE VARIABLE: si el nombre del id no es el mismo que el nombre de instanciacion designado a 
+	la clase, se generará una Exception, probar cambiando id=pais1-->
 	<bean id="pais" class="com.ejemplos.beans.Pais">
 	<property name="nombre" value="Perú"></property>
 	</bean>
