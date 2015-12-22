@@ -15,11 +15,7 @@ public class App {
 		
 		
 		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre()+" "+per.getCiudad().getNombre());
-		/*
-		##turorial 7 inyeccion de objetos##
-		
-		
-		 */
+	
 		//En caso de querer cerrar el recurso//
 		((ConfigurableApplicationContext)appContext).close();
 

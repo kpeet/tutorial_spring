@@ -1,6 +1,5 @@
 package com.ejemplos.beans;
 
-import java.util.List;
 
 public class Pais {
 	private String nombre;
