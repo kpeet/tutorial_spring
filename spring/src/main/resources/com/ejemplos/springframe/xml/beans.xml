@@ -5,7 +5,7 @@
 
 
 	<!-- Incorporacion de scope Singleton -->
-	<bean id="persona" class="com.ejemplos.beans.Persona" autowire="byName" scope="singleton">
+	<bean id="persona" class="com.ejemplos.beans.Persona" autowire="byName" scope="prototype">
 	<property name="id" value ="1"></property>
 	<property name="nombre" value ="Jaime"></property>
 	<property name="apodo" value ="MitoCode"></property>
