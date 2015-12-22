@@ -5,7 +5,13 @@
 
 
 	
-	<bean id="persona" class="com.ejemplos.beans.Persona" autowire="byName">
+	<bean id="persona" class="com.ejemplos.beans.Persona" autowire="byType">
+	<!-- al modificar byName a byType lo que hace el sistema es relacionar las clases los parametros
+	 de clase definidos en Persona.java con las clases definidas en el bean ej: class="com.ejemplos.beans.Pais" 
+	 
+	 Ojo, si tengo una clase del mismo tipo voy a tener problemas -->
+	
+	
 	<!-- Al escribir autowire nos olvidamos de las dependencias que son necesarias para este objeto -->
 	<!--  <property name="pais" ref="pais"></property> <-Dependencia borrada -->
 	
