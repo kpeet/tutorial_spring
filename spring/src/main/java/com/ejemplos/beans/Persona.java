@@ -1,5 +1,6 @@
 package com.ejemplos.beans;
 
+
 public class Persona {
 	
 	private int id;
