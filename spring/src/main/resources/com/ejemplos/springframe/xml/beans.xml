@@ -3,17 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" class="com.ejemplos.beans.Persona" autowire="byName">
-	<property name="apodo" value ="MitoCode"></property>
+	<bean id="messi" class="com.ejemplos.beans.Jugador">
+		<property name="numero" value="10"></property>
+		<property name="nombre" value="Lionel Messi"></property>
+		<!-- referencia a la clase que implementa su equipo -->
+		<property name="equipo" ref="barcelona"></property>
 	</bean>
-
-	<bean id="pais" class="com.ejemplos.beans.Pais">
-	<property name="nombre" value="Perú"></property>
-	</bean>
-	
-	<bean id="ciudad" class="com.ejemplos.beans.Ciudad">
-		<property name="nombre" value="Lima"></property>
-	</bean>
-	
-
+	<!-- clase que referencia a barcelona -->
+	<bean id="barcelona" class="com.ejemplos.beans.Barcelona"></bean>
 </beans>
