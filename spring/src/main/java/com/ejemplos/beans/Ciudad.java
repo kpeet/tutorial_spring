@@ -3,13 +3,14 @@ package com.ejemplos.beans;
 public class Ciudad {
 	private String nombre;
 	
+	/* Comentado en el tuto 17
 	private void init(){
 		System.out.println("Antes de inicializar el bean");
 	}
 	private void destroy(){
 		System.out.println("Bean a punto de ser destruido");
 	}
-
+   */
 	public String getNombre() {
 		return nombre;
 	}

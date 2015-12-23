@@ -1,7 +1,5 @@
 package com.ejemplos.beans;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -13,6 +11,18 @@ public class Persona implements InitializingBean, DisposableBean{
 	private String apodo;
 	private Pais pais;
 	private Ciudad ciudad;
+	
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("afterPropertiesSet Persona");
+		
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("destroy Persona");
+		
+	}
 	
 	/*@PostConstruct
 	private void init(){
@@ -64,17 +74,7 @@ public class Persona implements InitializingBean, DisposableBean{
 		this.apodo = apodo;
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("Antes de inicializar el bean");
-		
-	}
 
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("Bean a punto de ser destruido");
-		
-	}
 
 
 
