@@ -17,6 +17,7 @@ permite reconocer la anotacion Autowired-->
 		
 	</bean>
 	<!-- SI HAY MÁS DE UN BEAN, CON AUTOWIRED EL SISTEMA SE CAE PORQUE NO SABE QUE BEAN ELEJIR, PROBAR DESCOMENTANDO -->
-	<!--  <bean id="barcelona" class="com.ejemplos.beans.Barcelona"></bean>-->
+	 
+	 <bean id="equipo" class="com.ejemplos.beans.Barcelona"></bean>
 	<bean id="juventus" class="com.ejemplos.beans.Juventus"></bean>
 </beans>
