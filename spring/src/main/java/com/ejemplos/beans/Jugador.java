@@ -1,6 +1,7 @@
 package com.ejemplos.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.ejemplos.springframe.interfaces.IEquipo;
@@ -11,6 +12,7 @@ public class Jugador {
 	private String nombre;
 	
 	@Autowired
+	@Qualifier("barcelona")
 	private IEquipo equipo;//<- va a permitir cambiardinamicamente de equipo
 	
 	@Autowired
