@@ -1,45 +1,37 @@
 package com.ejemplos.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
 import com.ejemplos.springframe.interfaces.IEquipo;
 
-
-@Component("messi")//<-- le asigno el id al jugador
 public class Jugador {
-	private int numero;
-	
-	@Value("messi lionel")
+	private int id;
 	private String nombre;
-	
-	@Autowired
-	private IEquipo equipo;
-	
+	private IEquipo equipo;//<- va a permitir cambiardinamicamente de equipo
+	private Camiseta camiseta;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNombre() {
 		return nombre;
 	}
-	//@Required
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public int getNumero() {
-		return numero;
-	}
-	public void setNumero(int numero) {
-		this.numero = numero;
 	}
 	public IEquipo getEquipo() {
 		return equipo;
 	}
-	
-	//@Required
-	
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
+	public Camiseta getCamiseta() {
+		return camiseta;
+	}
+	public void setCamiseta(Camiseta camiseta) {
+		this.camiseta = camiseta;
+	}
+
+	
 
 }
