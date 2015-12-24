@@ -1,6 +1,7 @@
 package com.ejemplos.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 
 import com.ejemplos.springframe.interfaces.IEquipo;
@@ -10,6 +11,7 @@ public class Jugador {
 	private String nombre;
 	
 	@Autowired
+	@Qualifier("barcelonaQualifier")
 	private IEquipo equipo;
 	
 	public String getNombre() {

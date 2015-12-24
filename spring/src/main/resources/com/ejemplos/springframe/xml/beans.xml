@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-<!-- bean que hace accion en el backgroud al igual que  BeanPostProcessor, la clase 
-permite reconocer la anotacion Autowired-->
-<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+<!--  context:annotation-config -  con esto estamos diciendo que automáticamente va a 
+reconocer cualquier anotación que sea bajo spring.
+Nota: necesario agregar el context al Namespace
+  -->
+<context:annotation-config />
+
+
 
 	<bean id="messi" class="com.ejemplos.beans.Jugador">
 		<property name="numero" value="10"></property>
-		
 		<property name="nombre" value="Lionel Messi"></property>
-		<!-- si borro esta referencia, arrojará error porque es un atributo requerido,
-		esto se puede extender para cualquier parámetro -->
-		<!-- <property name="equipo" ref="barcelona"></property> -->
 		
 	</bean>
-	<!-- SI HAY MÁS DE UN BEAN, CON AUTOWIRED EL SISTEMA SE CAE PORQUE NO SABE QUE BEAN ELEJIR, PROBAR DESCOMENTANDO -->
 	 
-	 <bean id="equipo" class="com.ejemplos.beans.Barcelona"></bean>
+	 <bean id="barcelona" class="com.ejemplos.beans.Barcelona">
+	 <!-- Qualifier que permite conectar por Autowires el atributo equipo de la
+	  clase Jugador con el beans barcelona-->
+	 	<qualifier value="barcelonaQualifier"></qualifier>
+	 </bean>
 	<bean id="juventus" class="com.ejemplos.beans.Juventus"></bean>
 </beans>
+
