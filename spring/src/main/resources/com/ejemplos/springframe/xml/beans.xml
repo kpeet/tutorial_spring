@@ -5,25 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-<!--  context:annotation-config -  con esto estamos diciendo que automáticamente va a 
-reconocer cualquier anotación que sea bajo spring.
-Nota: necesario agregar el context al Namespace
-  -->
-<context:annotation-config />
+<context:component-scan base-package="com.ejemplos"></context:component-scan>
 
-
-
-	<bean id="messi" class="com.ejemplos.beans.Jugador">
-		<property name="numero" value="10"></property>
-		<property name="nombre" value="Lionel Messi"></property>
-		
-	</bean>
-	 
-	 <bean id="barcelona" class="com.ejemplos.beans.Barcelona">
-	 <!-- Qualifier que permite conectar por Autowires el atributo equipo de la
-	  clase Jugador con el beans barcelona-->
-	 	<qualifier value="barcelonaQualifier"></qualifier>
-	 </bean>
-	<bean id="juventus" class="com.ejemplos.beans.Juventus"></bean>
 </beans>
 
