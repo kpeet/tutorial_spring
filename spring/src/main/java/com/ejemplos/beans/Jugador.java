@@ -1,5 +1,6 @@
 package com.ejemplos.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 
 import com.ejemplos.springframe.interfaces.IEquipo;
@@ -7,7 +8,10 @@ import com.ejemplos.springframe.interfaces.IEquipo;
 public class Jugador {
 	private int numero;
 	private String nombre;
+	
+	@Autowired
 	private IEquipo equipo;
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -25,7 +29,7 @@ public class Jugador {
 		return equipo;
 	}
 	
-	@Required
+	//@Required
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
