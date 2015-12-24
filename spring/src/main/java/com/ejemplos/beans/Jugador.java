@@ -1,5 +1,7 @@
 package com.ejemplos.beans;
 
+import org.springframework.beans.factory.annotation.Required;
+
 import com.ejemplos.springframe.interfaces.IEquipo;
 
 public class Jugador {
@@ -9,6 +11,7 @@ public class Jugador {
 	public String getNombre() {
 		return nombre;
 	}
+	@Required
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -21,6 +24,8 @@ public class Jugador {
 	public IEquipo getEquipo() {
 		return equipo;
 	}
+	
+	@Required
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}

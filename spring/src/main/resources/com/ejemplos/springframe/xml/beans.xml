@@ -3,11 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!-- bean que hace accion en el backgroud al igual que  BeanPostProcessor, la clase permite reconocer la anotacion Required-->
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+
 	<bean id="messi" class="com.ejemplos.beans.Jugador">
 		<property name="numero" value="10"></property>
+		
 		<property name="nombre" value="Lionel Messi"></property>
-		<!-- referencia a la clase que implementa su equipo -->
+		<!-- si borro esta referencia, arrojará error porque es un atributo requerido,
+		esto se puede extender para cualquier parámetro -->
 		<property name="equipo" ref="barcelona"></property>
+		
 	</bean>
 	<!-- clase que referencia a barcelona -->
 	<bean id="barcelona" class="com.ejemplos.beans.Barcelona"></bean>
