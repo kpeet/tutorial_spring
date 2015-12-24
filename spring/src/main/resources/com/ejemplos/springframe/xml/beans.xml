@@ -11,4 +11,5 @@
 	</bean>
 	<!-- clase que referencia a barcelona -->
 	<bean id="barcelona" class="com.ejemplos.beans.Barcelona"></bean>
+	<bean id="juventus" class="com.ejemplos.beans.Juventus"></bean>
 </beans>
