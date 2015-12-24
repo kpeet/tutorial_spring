@@ -1,11 +1,19 @@
 package com.ejemplos.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.ejemplos.springframe.interfaces.IEquipo;
 
+@Component
 public class Jugador {
 	private int id;
 	private String nombre;
+	
+	@Autowired
 	private IEquipo equipo;//<- va a permitir cambiardinamicamente de equipo
+	
+	@Autowired
 	private Camiseta camiseta;
 	public int getId() {
 		return id;

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import com.ejemplos.springframe.interfaces.IEquipo;
 
-
+//@Component
 public class Juventus implements IEquipo{
 
 	@Override

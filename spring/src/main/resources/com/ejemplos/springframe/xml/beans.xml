@@ -5,14 +5,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+<!-- Para que reconosca las anotaciones debe ir lo sgte -->
+<context:component-scan base-package="com.ejemplos"></context:component-scan>
 <bean id="jugador1" class="com.ejemplos.beans.Jugador">
 <property name="id" value="1"></property>
 <property name="nombre" value="Kenneth"></property>
+<!--  Con Anotaciones estas referencias ya no son necesarias
 <property name="equipo" ref="barcelona"></property>
-<property name="camiseta" ref="camiseta1"></property>
+<property name="camiseta" ref="camiseta1"></property>-->
 
 </bean>
-
+<!-- Ya no necesitamos con anotaciones los sgte beans en el archivo xml 
 <bean id="barcelona" class="com.ejemplos.beans.Barcelona">
 </bean>
 <bean id="juventus" class="com.ejemplos.beans.Juventus">
@@ -26,7 +29,7 @@
 <bean id="marca1" class="com.ejemplos.beans.Marca">
 <property name="id" value="1"></property>
 <property name="nombre" value="Marca 1 Ok"></property>
-</bean>
+</bean>-->
 
 </beans>
 
