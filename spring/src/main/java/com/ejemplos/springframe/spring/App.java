@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ejemplos.beans.Barcelona;
@@ -14,7 +15,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/ejemplos/springframe/xml/beans.xml");
+		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		Jugador jug = (Jugador) appContext.getBean("jugador1");
 		
 		Scanner sc = new Scanner(System.in);
